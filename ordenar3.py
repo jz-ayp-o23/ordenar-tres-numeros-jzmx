@@ -1,15 +1,32 @@
 """
-Inserta el encabezado aquí y escribe tu código abajo
+Ordenar tres números de mayor a menor 
 """
 
-# Declaraciones
-CONSTANTE = valor
-
 # Entradas
-entrada = input()
-
+a =	float(input("Introduzca el primer número: "))
+b = float(input("Introduzca el segundo número: "))
+c = float(input("Introduzca el tercer número: "))
+	
 # Proceso
+# Primero se acomodan los dos primeros 
+# y luego se coloca el tercero en su lugar
+if a >= b:
+	mayor = a
+	menor = b
+else:
+	mayor = b
+	menor = a
 
+# Ahora acomodar c en su lugar
+if c >= mayor:
+	medio = mayor
+	mayor = c
+elif c <= menor:
+	medio = menor
+	menor = c
+else:
+	medio = c
 
 # Salidas
-print(salida)
+print("Los números en orden de mayor a menor son:",)
+print(mayor, medio, menor)
